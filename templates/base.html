@@ -1,0 +1,40 @@
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="BitField Web Site">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="author" content="AES">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="/assets/css/reset.css" rel="stylesheet" />
+		<link type="text/css" href="/assets/css/w3.css" rel="stylesheet" />
+		<link type="text/css" href="/assets/css/styles.css" rel="stylesheet" />
+		<script type="text/javascript" src="/assets/js/anime.min.js"></script>
+		<script type="text/javascript" src="/assets/js/main.js"></script>
+	</head>
+
+	<body>
+		{% block header %}
+		<header class="w3-container">
+			<div class="w3-bar" id="navbar">
+				<a class="navbar-item navbar-item--active" href="/">Home</a>
+				<a class="navbar-item" href="http://localhost:8080/">Application</a>
+				<a class="navbar-item" href="/about">About</a>
+			</div>
+		</header>
+		{% endblock header %}
+
+		{% block content %}{% endblock content %}
+
+		<footer class="w3-container w3-auto">
+
+			{% block footer %}
+			<div class="w3-center w3-tiny">
+				{{ now() | date(format="%H:%M:%S %d-%m-%Y") }}
+			</div>
+			{% endblock footer %}
+
+		</footer>
+
+	</body>
+</html>

@@ -1,0 +1,80 @@
+:root {
+	--color-0: #0069D6;
+	--color-1: #003D7C;
+	--color-2: #FFC500;
+	--color-3: #BF9300;
+	--color-4: #FF5600;
+	--color-5: #BF4000;
+	--dark-0: #111111;
+	--dark-1: #444444;
+	--light-0: #eeeeee;
+	--light-1: #cccccc;
+}
+
+@font-face {
+	font-family: "Exo2";
+	src: url(../font/Exo2-Regular.ttf);
+}
+
+* {
+	font-family: "Exo2";
+	color: var(--light-0);
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: "Exo2";
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 5rem;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	background: url("../svg/rose-petals.svg") center no-repeat;
+	background-size: cover;
+}
+
+header {
+	height: 20vh;
+}
+
+#navbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+#navbar a {
+	margin: 4px;
+	font-size: 1rem;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
+#navbar a:last-child {
+	margin-right: 2vw;
+}
+
+header  h1 {
+	margin: 0 auto;
+	text-align: center;
+}
+
+main {
+	height: 70vh;
+}
+
+footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	height: 5vh;
+}

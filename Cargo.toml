@@ -1,0 +1,59 @@
+[package]
+name = "backend-template-rust"
+version = "0.1.0"
+authors = ["jhaboic <josiphaboic@gmail.com>"]
+edition = "2018"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix = "0.12.0"
+actix-cors = "0.5.4"
+actix-files = "0.5.0"
+actix-http = "2.2.1"
+actix-net = "0.2.6"
+actix-service = "2.0.0"
+actix-session = "0.4.1"
+actix-web = "3.0.0"
+apparch = { path = "./apparch", version = "0.1.0" }
+async-trait = "0.1.51"
+bcrypt = "0.10"
+chrono = "0.4.19"
+dataloader = "0.14.0"
+derive_more = "0.99.16"
+futures = "0.3.17"
+graphql-parser = "0.3.0"
+http = "0.2.5"
+juniper = "0.15.7"
+juniper_graphql_ws = { version = "0.3.0", optional = true }
+lazy_static = "1.4.0"
+log = "0.4.14"
+log4rs = "1.0.0"
+postgres = "0.19.2"
+r2d2 = "0.8.9"
+rayon = "1.5"
+rs-uuid = "0.3.1"
+serde = { version = "1.0.130", features = ["derive"] }
+serde_bytes = "0.11.5"
+serde_derive = "1.0.130"
+serde_json = "1.0.68"
+serialport = "4.0.1"
+sqlx = {version = "0.5.8", features = ["runtime-async-std-native-tls", "postgres", "migrate", "json", "sqlite"]} # runtime-actix-rustls, runtime-actix-native-tls
+tera = {version="1.15.0", features=["builtins"]}
+waiter_di = "1.6.5"
+
+[dev-dependencies]
+actix-rt = "2.3.0"
+actix-cors = "0.5.4"
+actix-identity = "0.3.1"
+tokio = "1.12.0"
+async-stream = "0.3.2"
+actix-test = "0.0.1"
+juniper = { version = "0.15.7", features = ["expose-test-schema"] }
+bytes = "1.1.0"
+env_logger = "0.9.0"
+log = "0.4.14"
+
+# [profile.release]
+# lto = true
+# codegen-units = 16
+# opt-level = 3
